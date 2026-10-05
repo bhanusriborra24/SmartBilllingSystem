@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Supplier</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+
+    background-image:url("img2.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:500px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    color:darkgreen;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+}
+
+textarea{
+    resize:none;
+}
+
+.buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:space-between;
+}
+
+button{
+    width:48%;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.save{
+    background:darkgreen;
+}
+
+.reset{
+    background:red;
+}
+
+.save:hover{
+    background:green;
+}
+
+.reset:hover{
+    background:darkred;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Add Supplier</h2>
+
+<form action="supplier.jsp" method="post">
+
+<label>Supplier Name</label>
+<input type="text" name="supplier_name" required>
+
+<label>Company Name</label>
+<input type="text" name="company_name" required>
+
+<label>Phone Number</label>
+<input type="tel" name="phone" minlength="10" maxlength="10" pattern="[0-9]{}" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Address</label>
+<textarea name="address" rows="4" required></textarea>
+
+<div class="buttons">
+<button type="submit" class="save">Save</button>
+<button type="reset" class="reset">Reset</button>
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>
